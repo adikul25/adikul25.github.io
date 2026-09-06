@@ -1,647 +1,583 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-5BB8W2X');</script>
-  <!-- End Google Tag Manager -->
-  <link rel="icon" type="image/png" href="/favicon.png"/>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5BB8W2X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="utf-8" />
+<link rel="icon" type="image/png" href="/favicon.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aditya Kulkarni — AI/ML Engineer</title>
+<meta name="description" content="AI/ML Engineer in Pittsburgh building generative-AI systems, RAG pipelines and multi-agent applications across FinTech, HRTech and AgroTech." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #f6f4ef;
+    --bg-2: #efece5;
+    --surface: #ffffff;
+    --surface-hi: #fbfaf7;
+    --ink: #14181c;
+    --ink-2: #4c545e;
+    --ink-3: #8b939d;
+    --line: rgba(20,24,28,0.14);
+    --line-soft: rgba(20,24,28,0.08);
+    --acc: #0b8a4f;
+    --acc-ink: #ffffff;
+    --acc-soft: rgba(11,138,79,0.10);
+    --acc-edge: rgba(11,138,79,0.28);
+    --acc2: #bd4520;
+    --acc2-soft: rgba(189,69,32,0.10);
+    --glow-1: rgba(11,138,79,0.13);
+    --glow-2: rgba(189,69,32,0.09);
+    --photo: grayscale(0.15) contrast(1.02);
+    --logo-filter: grayscale(1) brightness(0.55);
+  }
+  :root[data-ak-theme="dark"] {
+    --bg: #101418;
+    --bg-2: #0b0e11;
+    --surface: #171c21;
+    --surface-hi: #1d242a;
+    --ink: #eef1f3;
+    --ink-2: #a8b1b9;
+    --ink-3: #6d767f;
+    --line: rgba(255,255,255,0.13);
+    --line-soft: rgba(255,255,255,0.07);
+    --acc: #34d77e;
+    --acc-ink: #06130c;
+    --acc-soft: rgba(52,215,126,0.11);
+    --acc-edge: rgba(52,215,126,0.3);
+    --acc2: #ff8a6b;
+    --acc2-soft: rgba(255,138,107,0.12);
+    --glow-1: rgba(52,215,126,0.13);
+    --glow-2: rgba(255,138,107,0.08);
+    --photo: grayscale(0.35) contrast(1.05);
+    --logo-filter: grayscale(1) brightness(1.9);
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: "IBM Plex Sans", system-ui, sans-serif; -webkit-font-smoothing: antialiased; transition: background 0.35s ease, color 0.35s ease; }
+  a { color: var(--acc); text-decoration: none; }
+  a:hover { color: var(--acc2); }
+  ul { margin: 0; padding: 0; }
+  h1, h2, h3, h4 { margin: 0; font-weight: 700; }
+  p { margin: 0; text-wrap: pretty; }
+  ::selection { background: var(--acc); color: var(--acc-ink); }
+  @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+  @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+</style>
+<style>
+.hv1:hover{color: var(--ink) !important;}
+.hv2:hover{color: var(--ink) !important;}
+.hv3:hover{color: var(--ink) !important;}
+.hv4:hover{color: var(--ink) !important;}
+.hv5:hover{color: var(--ink) !important;}
+.hv6:hover{background: var(--acc) !important; color: var(--acc-ink) !important; border-color: var(--acc) !important;}
+.hv7:hover{border-color: var(--acc) !important; color: var(--acc) !important;}
+.hv8:hover{background: var(--acc2) !important; color: #fff !important;}
+.hv9:hover{border-color: var(--acc) !important; color: var(--acc) !important;}
+.hv10:hover{border-color: var(--acc) !important; color: var(--acc) !important;}
+.hv11:hover{border-color: var(--acc) !important; color: var(--acc) !important;}
+.hv12:hover{background: var(--acc-soft) !important;}
+.hv13:hover{color: var(--acc2) !important;}
+.hv14:hover{background: var(--acc-soft) !important;}
+.hv15:hover{color: var(--acc2) !important;}
+.hv16:hover{background: var(--acc-soft) !important;}
+.hv17:hover{color: var(--acc2) !important;}
+.hv18:hover{background: var(--acc-soft) !important;}
+.hv19:hover{color: var(--acc2) !important;}
+.hv20:hover{background: var(--surface-hi) !important;}
+.hv21:hover{background: var(--surface-hi) !important;}
+.hv22:hover{background: var(--surface-hi) !important;}
+.hv23:hover{background: var(--surface-hi) !important;}
+.hv24:hover{background: var(--acc-soft) !important;}
+.hv25:hover{background: var(--acc-soft) !important;}
+.hv26:hover{background: var(--acc-soft) !important;}
+.hv27:hover{background: var(--acc-soft) !important;}
+.hv28:hover{background: var(--acc-soft) !important;}
+.hv29:hover{background: var(--acc-soft) !important;}
+.hv30:hover{background: var(--acc-soft) !important;}
+.hv31:hover{background: var(--acc-soft) !important;}
+.hv32:hover{background: var(--surface-hi) !important;}
+.hv33:hover{background: var(--surface-hi) !important;}
+.hv34:hover{color: var(--acc2) !important; border-bottom-color: var(--acc2) !important;}
+.hv35:hover{background: var(--surface-hi) !important;}
+.hv36:hover{background: var(--surface-hi) !important;}
+.hv37:hover{background: var(--surface-hi) !important;}
+.hv38:hover{background: var(--surface-hi) !important;}
+.hv39:hover{background: var(--surface-hi) !important;}
+.hv40:hover{background: var(--surface-hi) !important;}
+</style>
+<script>
+(function () {
+  var KEY = 'ak-portfolio-theme';
+  var saved = null;
+  try { saved = localStorage.getItem(KEY); } catch (e) {}
+  var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  setTheme(saved || (prefersDark ? 'dark' : 'light'), false);
 
-  <title>Personal Portfolio</title>
-  <meta content="" name="descriptison">
-  <meta content="" name="keywords">
+  function setTheme(theme, persist) {
+    document.documentElement.setAttribute('data-ak-theme', theme);
+    if (persist !== false) { try { localStorage.setItem(KEY, theme); } catch (e) {} }
+    var icon = document.getElementById('ak-theme-icon');
+    var btn = document.getElementById('ak-theme-btn');
+    if (icon) { icon.textContent = theme === 'dark' ? '\u2600' : '\u263e'; }
+    if (btn) {
+      var label = theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme';
+      btn.setAttribute('aria-label', label);
+      btn.setAttribute('title', label);
+    }
+  }
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  window.akToggleTheme = function () {
+    var current = document.documentElement.getAttribute('data-ak-theme');
+    setTheme(current === 'dark' ? 'light' : 'dark', true);
+  };
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169007209-3"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-169007209-3');
-  </script>
-
-
-
-  <!-- =======================================================
-  * Template Name: Personal - v2.1.0
-  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  document.addEventListener('DOMContentLoaded', function () {
+    setTheme(document.documentElement.getAttribute('data-ak-theme') || 'light', false);
+  });
+})();</script>
 </head>
-
 <body>
+<div style="min-height: 100vh; background-color: var(--bg); background-image: radial-gradient(120% 65% at 8% -8%, var(--glow-1), transparent 62%), radial-gradient(90% 55% at 98% 4%, var(--glow-2), transparent 60%); background-attachment: fixed; transition: background-color 0.35s ease;">
+<div style="max-width: 1120px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 56px);">
+
+<header style="position: sticky; top: 0; z-index: 20; margin: 0 calc(-1 * clamp(20px, 5vw, 56px)); padding: 0 clamp(20px, 5vw, 56px); background: transparent; backdrop-filter: blur(16px) saturate(1.4); -webkit-backdrop-filter: blur(16px) saturate(1.4); border-bottom: 1px solid var(--line-soft);">
+  <div style="display: flex; align-items: center; justify-content: space-between; gap: clamp(16px, 4vw, 40px); padding: 18px 0; flex-wrap: wrap; max-width: 1008px; margin: 0 auto;">
+  <a href="#top" style="font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 700; letter-spacing: -0.02em; color: var(--ink); white-space: nowrap;">Aditya Kulkarni</a>
+  <nav style="display: flex; align-items: center; gap: clamp(14px, 2.4vw, 30px); flex-wrap: wrap; font-family: 'IBM Plex Sans', sans-serif; font-size: 15px;">
+    <a href="#work" style="color: var(--ink-2);" class="hv1">Work</a>
+    <a href="#projects" style="color: var(--ink-2);" class="hv2">Projects</a>
+    <a href="#writing" style="color: var(--ink-2);" class="hv3">Writing</a>
+    <a href="#stack" style="color: var(--ink-2);" class="hv4">Stack</a>
+    <a href="#contact" style="color: var(--ink-2);" class="hv5">Contact</a>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <a href="https://drive.google.com/file/d/1EB8Own4JNi8UBjKoXlw4p1dkHH_P8J4U/view?usp=drivesdk" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; padding: 8px 15px; border: 1px solid var(--acc-edge); background: var(--acc-soft); color: var(--acc); font-size: 14px; font-weight: 500; transition: background 0.2s, border-color 0.2s;" class="hv6">Résumé</a>
+      <button type="button" onclick="akToggleTheme()" aria-label="Switch to dark theme" title="Switch to dark theme" id="ak-theme-btn" style="display: inline-flex; align-items: center; justify-content: center; width: 35px; height: 35px; padding: 0; background: transparent; border: 1px solid var(--line); color: var(--ink-2); font-size: 15px; line-height: 1; cursor: pointer; transition: border-color 0.2s, color 0.2s;" class="hv7" id="ak-theme-icon">☾</button>
+    </div>
+  </nav>
+  </div>
+</header>
+
+<section id="top" style="padding: clamp(60px, 11vh, 124px) 0 clamp(48px, 8vh, 84px);">
+  <div style="display: flex; align-items: center; gap: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); animation: rise 0.6s ease-out both;">
+    <span style="width: 7px; height: 7px; border-radius: 50%; background: var(--acc2);"></span>
+    <span>Pittsburgh, PA</span>
+    <span style="color: var(--ink-3);">/</span>
+    <span>Open to connecting</span>
+  </div>
+
+  <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(46px, 10vw, 118px); line-height: 0.92; letter-spacing: -0.035em; margin: 22px 0 0; animation: rise 0.7s ease-out 0.06s both;">
+    Aditya<br />Kulkarni
+  </h1>
+
+  <div style="display: flex; align-items: center; gap: 14px; margin-top: 26px; animation: rise 0.7s ease-out 0.14s both;">
+    <span style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(14px, 2.4vw, 20px); font-weight: 500; letter-spacing: 0.02em; color: var(--acc);">AI/ML Engineer</span>
+    <span style="display: inline-block; width: 9px; height: clamp(16px, 2.6vw, 22px); background: var(--acc2); animation: blink 1.1s steps(1) infinite;"></span>
+  </div>
+
+  <p style="max-width: 60ch; margin-top: 26px; font-size: clamp(17px, 2.2vw, 21px); line-height: 1.55; color: var(--ink-2); animation: rise 0.7s ease-out 0.2s both;">
+    I build generative-AI systems that actually reach production — multi-agent orchestration, RAG pipelines and the backend plumbing that keeps them honest. Three years of it, across FinTech, HRTech, AgroTech and EdTech.
+  </p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1px; margin-top: clamp(44px, 7vh, 72px); background: var(--line); border: 1px solid var(--line); animation: rise 0.7s ease-out 0.28s both;">
+    <div style="background: var(--surface); padding: 24px 22px;">
+      <div style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(34px, 5vw, 48px); line-height: 1; letter-spacing: -0.03em; color: var(--acc);">60<span style="font-size: 0.55em;">%</span></div>
+      <div style="margin-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; line-height: 1.5; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink-2);">Fewer HR support requests<br />after the immigration agent</div>
+    </div>
+    <div style="background: var(--surface); padding: 24px 22px;">
+      <div style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(34px, 5vw, 48px); line-height: 1; letter-spacing: -0.03em; color: var(--acc2);">10<span style="font-size: 0.55em;">K+</span></div>
+      <div style="margin-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; line-height: 1.5; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink-2);">Employee records migrated<br />through an HRIS pipeline</div>
+    </div>
+    <div style="background: var(--surface); padding: 24px 22px;">
+      <div style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(34px, 5vw, 48px); line-height: 1; letter-spacing: -0.03em; color: var(--acc);">50<span style="font-size: 0.55em;">%</span></div>
+      <div style="margin-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; line-height: 1.5; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink-2);">Faster résumé screening<br />with a Gemini classifier</div>
+    </div>
+    <div style="background: var(--surface); padding: 24px 22px;">
+      <div style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(34px, 5vw, 48px); line-height: 1; letter-spacing: -0.03em; color: var(--acc2);">35<span style="font-size: 0.55em;">%</span></div>
+      <div style="margin-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; line-height: 1.5; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink-2);">Lift in decision speed<br />on an enterprise RAG platform</div>
+    </div>
+  </div>
+
+  <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; animation: rise 0.7s ease-out 0.34s both;">
+    <a href="mailto:adikulk2598@gmail.com" style="display: inline-flex; align-items: center; gap: 9px; padding: 13px 22px; background: var(--acc); color: var(--acc-ink); font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; transition: background 0.2s;" class="hv8">Get in touch <span>→</span></a>
+    <a href="https://www.github.com/adikul25" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 9px; padding: 13px 22px; border: 1px solid var(--line); color: var(--ink); font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; transition: border-color 0.2s, color 0.2s;" class="hv9">GitHub ↗</a>
+    <a href="https://www.linkedin.com/in/aditya-kulkarni-855675205/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 9px; padding: 13px 22px; border: 1px solid var(--line); color: var(--ink); font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; transition: border-color 0.2s, color 0.2s;" class="hv10">LinkedIn ↗</a>
+    <a href="https://huggingface.co/Adikul25" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 9px; padding: 13px 22px; border: 1px solid var(--line); color: var(--ink); font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; transition: border-color 0.2s, color 0.2s;" class="hv11">Hugging Face ↗</a>
+  </div>
+</section>
+
+<section id="about" style="padding: clamp(48px, 8vh, 88px) 0; border-top: 1px solid var(--line-soft);">
+  <div style="display: grid; grid-template-columns: minmax(0, 1fr); gap: 40px;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3);">01 — Profile</div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: clamp(28px, 5vw, 56px); align-items: start;">
+      <div>
+        <div style="position: relative; border: 1px solid var(--line); padding: 10px; max-width: 300px; background: var(--surface);">
+          <img src="assets/portrait.jpg" alt="Portrait of Aditya Kulkarni" style="display: block; width: 100%; height: auto; filter: var(--photo);" />
+          <span style="position: absolute; bottom: -1px; right: -1px; padding: 6px 10px; background: var(--acc2); color: #fff; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; font-weight: 600; letter-spacing: 0.08em;">PITTSBURGH, PA</span>
+        </div>
+        <div style="margin-top: 22px; display: flex; flex-wrap: wrap; gap: 7px;">
+          <span style="padding: 6px 11px; border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em; color: var(--ink-2);">Generative AI</span>
+          <span style="padding: 6px 11px; border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em; color: var(--ink-2);">RAG</span>
+          <span style="padding: 6px 11px; border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em; color: var(--ink-2);">Multi-agent systems</span>
+          <span style="padding: 6px 11px; border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em; color: var(--ink-2);">NLP</span>
+          <span style="padding: 6px 11px; border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em; color: var(--ink-2);">Data engineering</span>
+          <span style="padding: 6px 11px; border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em; color: var(--ink-2);">Graph databases</span>
+          <span style="padding: 6px 11px; border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em; color: var(--ink-2);">Visualization</span>
+        </div>
+      </div>
+      <div style="display: grid; gap: 22px;">
+        <p style="font-size: clamp(16px, 1.8vw, 18.5px); line-height: 1.65; color: var(--ink-2);">
+          I started in electronics and ended up building the systems that make language models useful at work. Most of what I ship sits at the seam between a model and a business process: a chatbot that answers immigration questions HR used to field by hand, a RAG platform that made an enterprise knowledge base searchable, a screening pipeline that reads ten thousand résumés without a human in the loop.
+        </p>
+        <p style="font-size: clamp(16px, 1.8vw, 18.5px); line-height: 1.65; color: var(--ink-2);">
+          Day to day that means Python, FastAPI, LangChain and LangGraph, with SQL and AWS or GCP underneath. I hold an MS in Business Analytics from Cal State East Bay, and I'm now an AI Process Analyst at BNY, working on where automation actually belongs inside a large financial institution.
+        </p>
+        <dl style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px; margin: 4px 0 0; background: var(--line); border: 1px solid var(--line);">
+          <div style="background: var(--surface); padding: 16px 18px;">
+            <dt style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3);">Based in</dt>
+            <dd style="margin: 7px 0 0; font-size: 14.5px; color: var(--ink);">Pittsburgh, PA</dd>
+          </div>
+          <div style="background: var(--surface); padding: 16px 18px;">
+            <dt style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3);">Email</dt>
+            <dd style="margin: 7px 0 0; font-size: 14.5px;"><a href="mailto:adikulk2598@gmail.com">adikulk2598@gmail.com</a></dd>
+          </div>
+          <div style="background: var(--surface); padding: 16px 18px;">
+            <dt style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3);">Experience</dt>
+            <dd style="margin: 7px 0 0; font-size: 14.5px; color: var(--ink);">3+ years in AI &amp; data</dd>
+          </div>
+          
+            <div style="background: var(--surface); padding: 16px 18px;">
+              <dt style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3);">Phone</dt>
+              <dd style="margin: 7px 0 0; font-size: 14.5px; color: var(--ink);">+1 510-294-8746</dd>
+            </div>
+          
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work" style="padding: clamp(48px, 8vh, 88px) 0; border-top: 1px solid var(--line-soft);">
+  <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 44px;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3);">02 — Experience</div>
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(28px, 4.5vw, 46px); line-height: 1; letter-spacing: -0.03em;">Where I've shipped</h2>
+  </div>
+
+  <div style="display: grid; gap: 0; border-top: 1px solid var(--line);">
+    <article style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: clamp(16px, 4vw, 48px); padding: 30px 0; border-bottom: 1px solid var(--line); transition: background 0.25s;" class="hv12">
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.08em; color: var(--acc);">AUG 2026 — PRESENT</div>
+        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 3vw, 30px); letter-spacing: -0.02em; margin-top: 12px;"><a href="https://www.bny.com/" target="_blank" rel="noopener" style="color: var(--ink);" class="hv13">BNY ↗</a></h3>
+        <div style="margin-top: 8px; font-size: 15px; color: var(--ink-2); font-style: italic;">AI Process Analyst</div>
+      </div>
+      <div style="grid-column: span 2; min-width: 0;">
+        <p style="font-size: 16.5px; line-height: 1.62; color: var(--ink-2);">Mapping where AI genuinely improves a process inside a global financial institution — and where it doesn't. The work runs from process discovery through to designing and validating the automation that replaces the manual step.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 7px; margin-top: 16px;">
+          <span style="padding: 5px 10px; background: var(--acc-soft); border: 1px solid var(--acc-edge); font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.04em; color: var(--acc);">Process design</span>
+          <span style="padding: 5px 10px; background: var(--acc-soft); border: 1px solid var(--acc-edge); font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.04em; color: var(--acc);">LLM automation</span>
+          <span style="padding: 5px 10px; background: var(--acc-soft); border: 1px solid var(--acc-edge); font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.04em; color: var(--acc);">FinTech</span>
+        </div>
+      </div>
+    </article>
+
+    <article style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: clamp(16px, 4vw, 48px); padding: 30px 0; border-bottom: 1px solid var(--line); transition: background 0.25s;" class="hv14">
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.08em; color: var(--acc);">SEP 2025 — AUG 2026</div>
+        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 3vw, 30px); letter-spacing: -0.02em; margin-top: 12px;"><a href="https://www.apexon.com/" target="_blank" rel="noopener" style="color: var(--ink);" class="hv15">Apexon ↗</a></h3>
+        <div style="margin-top: 8px; font-size: 15px; color: var(--ink-2); font-style: italic;">AI/ML Engineer Intern</div>
+      </div>
+      <div style="grid-column: span 2; min-width: 0;">
+        <p style="font-size: 16.5px; line-height: 1.62; color: var(--ink-2);">Built an immigration-support chatbot on LangGraph and FastAPI — a multi-agent graph over a RAG index of policy documents. It now handles the questions HR used to answer one at a time, cutting support requests by 60%.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 7px; margin-top: 16px;">
+          <span style="padding: 5px 10px; background: var(--acc-soft); border: 1px solid var(--acc-edge); font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.04em; color: var(--acc);">LangGraph</span>
+          <span style="padding: 5px 10px; background: var(--acc-soft); border: 1px solid var(--acc-edge); font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.04em; color: var(--acc);">FastAPI</span>
+          <span style="padding: 5px 10px; background: var(--acc-soft); border: 1px solid var(--acc-edge); font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.04em; color: var(--acc);">RAG</span>
+          <span style="padding: 5px 10px; background: var(--acc-soft); border: 1px solid var(--acc-edge); font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.04em; color: var(--acc);">Multi-agent</span>
+        </div>
+      </div>
+    </article>
+
+    <article style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: clamp(16px, 4vw, 48px); padding: 30px 0; border-bottom: 1px solid var(--line); transition: background 0.25s;" class="hv16">
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.08em; color: var(--acc);">MAY 2025 — SEP 2025</div>
+        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 3vw, 30px); letter-spacing: -0.02em; margin-top: 12px;"><a href="https://www.gohighlevel.com/" target="_blank" rel="noopener" style="color: var(--ink);" class="hv17">GoHighLevel ↗</a></h3>
+        <div style="margin-top: 8px; font-size: 15px; color: var(--ink-2); font-style: italic;">AI Engineer Intern</div>
+      </div>
+      <div style="grid-column: span 2; min-width: 0;">
+        <p style="font-size: 16.5px; line-height: 1.62; color: var(--ink-2);">Automated two HR bottlenecks: an HRIS migration pipeline that moved 10,000+ employee records, and a Gemini-based résumé screener that halved time-to-shortlist.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 7px; margin-top: 16px;">
+          <span style="padding: 5px 10px; background: var(--acc-soft); border: 1px solid var(--acc-edge); font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.04em; color: var(--acc);">Gemini</span>
+          <span style="padding: 5px 10px; background: var(--acc-soft); border: 1px solid var(--acc-edge); font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.04em; color: var(--acc);">Python</span>
+          <span style="padding: 5px 10px; background: var(--acc-soft); border: 1px solid var(--acc-edge); font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.04em; color: var(--acc);">ETL</span>
+          <span style="padding: 5px 10px; background: var(--acc-soft); border: 1px solid var(--acc-edge); font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.04em; color: var(--acc);">HRTech</span>
+        </div>
+      </div>
+    </article>
+
+    <article style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: clamp(16px, 4vw, 48px); padding: 30px 0; border-bottom: 1px solid var(--line); transition: background 0.25s;" class="hv18">
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.08em; color: var(--acc);">DEC 2021 — AUG 2023</div>
+        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 3vw, 30px); letter-spacing: -0.02em; margin-top: 12px;"><a href="https://www.konverge.ai/" target="_blank" rel="noopener" style="color: var(--ink);" class="hv19">Konverge.ai ↗</a></h3>
+        <div style="margin-top: 8px; font-size: 15px; color: var(--ink-2); font-style: italic;">Data Scientist</div>
+      </div>
+      <div style="grid-column: span 2; min-width: 0;">
+        <p style="font-size: 16.5px; line-height: 1.62; color: var(--ink-2);">Two years of enterprise AI delivery — a RAG-based HR question-answering platform and a GPT-4 system that scored startup pitch decks. Together they lifted decision-making efficiency 35% for the teams using them.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 7px; margin-top: 16px;">
+          <span style="padding: 5px 10px; background: var(--acc-soft); border: 1px solid var(--acc-edge); font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.04em; color: var(--acc);">GPT-4</span>
+          <span style="padding: 5px 10px; background: var(--acc-soft); border: 1px solid var(--acc-edge); font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.04em; color: var(--acc);">LangChain</span>
+          <span style="padding: 5px 10px; background: var(--acc-soft); border: 1px solid var(--acc-edge); font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.04em; color: var(--acc);">Vector search</span>
+          <span style="padding: 5px 10px; background: var(--acc-soft); border: 1px solid var(--acc-edge); font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.04em; color: var(--acc);">Neo4j</span>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <p style="margin-top: 24px; font-size: 14.5px; line-height: 1.7; color: var(--ink-2);">
+    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3);">On the side&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+    Co-founded <strong style="color: var(--ink); font-weight: 600;">IRIKA</strong> (2024) — smart irrigation pairing soil and weather telemetry with an AI advisor.
+  </p>
+</section>
+
+<section id="projects" style="padding: clamp(48px, 8vh, 88px) 0; border-top: 1px solid var(--line-soft);">
+  <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 44px;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3);">03 — Selected projects</div>
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(28px, 4.5vw, 46px); line-height: 1; letter-spacing: -0.03em;">Things I built</h2>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line);">
+    <article style="background: var(--surface); padding: clamp(24px, 3vw, 34px); display: flex; flex-direction: column; gap: 16px; transition: background 0.25s;" class="hv20">
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--acc2);">Voice AI</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: var(--ink-3);">01</span>
+      </div>
+      <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(21px, 2.6vw, 27px); letter-spacing: -0.02em; line-height: 1.15;">AI Receptionist</h3>
+      <p style="font-size: 15.5px; line-height: 1.6; color: var(--ink-2); flex: 1;">A self-hosted phone receptionist built directly on OpenAI's Realtime speech-to-speech model, bridged to real phone lines through LiveKit and SIP. Sub-second turn-taking, YAML-configured FAQs and routing, one process serving many businesses — no SaaS subscription in the loop.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+        <span style="padding: 5px 9px; border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; color: var(--ink-2);">OpenAI Realtime</span>
+        <span style="padding: 5px 9px; border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; color: var(--ink-2);">LiveKit</span>
+        <span style="padding: 5px 9px; border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; color: var(--ink-2);">SIP</span>
+        <span style="padding: 5px 9px; border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; color: var(--ink-2);">Python</span>
+      </div>
+      <a href="https://github.com/adikul25/AIReceptionist" target="_blank" rel="noopener" style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase;">Source ↗</a>
+    </article>
+
+    <article style="background: var(--surface); padding: clamp(24px, 3vw, 34px); display: flex; flex-direction: column; gap: 16px; transition: background 0.25s;" class="hv21">
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--acc2);">Health ops</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: var(--ink-3);">02</span>
+      </div>
+      <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(21px, 2.6vw, 27px); letter-spacing: -0.02em; line-height: 1.15;">Clinical Ops Console</h3>
+      <p style="font-size: 15.5px; line-height: 1.6; color: var(--ink-2); flex: 1;">Three clinical-operations tools behind one sidebar, built for a health-network case study: a no-show risk queue, a care-management triage board and a referral tracker. Every state change is undoable, every control keyboard-operable, and the whole thing respects <code style="font-family: 'IBM Plex Mono', monospace; font-size: 0.9em; color: var(--ink);">prefers-reduced-motion</code>.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+        <span style="padding: 5px 9px; border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; color: var(--ink-2);">React</span>
+        <span style="padding: 5px 9px; border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; color: var(--ink-2);">Risk scoring</span>
+        <span style="padding: 5px 9px; border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; color: var(--ink-2);">A11y</span>
+      </div>
+      <a href="https://github.com/adikul25/astrana-ops-console" target="_blank" rel="noopener" style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase;">Source ↗</a>
+    </article>
+
+    <article style="background: var(--surface); padding: clamp(24px, 3vw, 34px); display: flex; flex-direction: column; gap: 16px; transition: background 0.25s;" class="hv22">
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--acc2);">Generative AI</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: var(--ink-3);">03</span>
+      </div>
+      <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(21px, 2.6vw, 27px); letter-spacing: -0.02em; line-height: 1.15;">PPT AI Rewriter</h3>
+      <p style="font-size: 15.5px; line-height: 1.6; color: var(--ink-2); flex: 1;">Upload a PowerPoint, name a topic, get every slide rewritten — with the original design and layout intact. FastAPI backend, React + TypeScript front end, and a load test that pushes ten decks through the LLM flow concurrently.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+        <span style="padding: 5px 9px; border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; color: var(--ink-2);">FastAPI</span>
+        <span style="padding: 5px 9px; border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; color: var(--ink-2);">React + TS</span>
+        <span style="padding: 5px 9px; border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; color: var(--ink-2);">python-pptx</span>
+      </div>
+      <a href="https://github.com/adikul25/presentation-ai" target="_blank" rel="noopener" style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase;">Source ↗</a>
+    </article>
+
+    <article style="background: var(--surface); padding: clamp(24px, 3vw, 34px); display: flex; flex-direction: column; gap: 16px; transition: background 0.25s;" class="hv23">
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--acc2);">Agents</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: var(--ink-3);">04</span>
+      </div>
+      <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(21px, 2.6vw, 27px); letter-spacing: -0.02em; line-height: 1.15;">ResearchAI</h3>
+      <p style="font-size: 15.5px; line-height: 1.6; color: var(--ink-2); flex: 1;">A multi-agent research crew: specialised agents with their own roles, tools and web-scraping abilities collaborate on a topic and return a structured, sourced brief instead of a wall of prose.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+        <span style="padding: 5px 9px; border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; color: var(--ink-2);">CrewAI</span>
+        <span style="padding: 5px 9px; border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; color: var(--ink-2);">LangChain</span>
+        <span style="padding: 5px 9px; border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; color: var(--ink-2);">Web tools</span>
+      </div>
+      <a href="https://github.com/adikul25/Research_Crew_AI" target="_blank" rel="noopener" style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase;">Source ↗</a>
+    </article>
+  </div>
+
+  <div style="margin-top: 40px;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); padding-bottom: 14px; border-bottom: 1px solid var(--line);">Also on GitHub</div>
+    <ul style="list-style: none; display: grid;">
+      <li><a href="https://github.com/adikul25/RAG_image_search" target="_blank" rel="noopener" style="display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 18px; row-gap: 6px; padding: 17px 8px; border-bottom: 1px solid var(--line-soft); color: var(--ink); transition: background 0.2s;" class="hv24"><span style="flex: 1 1 220px; min-width: 0; font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 500;">Image RAG Search</span><span style="flex: 2 1 260px; min-width: 0; font-size: 14.5px; color: var(--ink-2);">Search a photo library in plain language via CLIP embeddings and a vector index.</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--ink-3);">↗</span></a></li>
+      <li><a href="https://github.com/adikul25/ai-stock-analysis" target="_blank" rel="noopener" style="display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 18px; row-gap: 6px; padding: 17px 8px; border-bottom: 1px solid var(--line-soft); color: var(--ink); transition: background 0.2s;" class="hv25"><span style="flex: 1 1 220px; min-width: 0; font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 500;">AI Stock Analysis</span><span style="flex: 2 1 260px; min-width: 0; font-size: 14.5px; color: var(--ink-2);">LLM-assisted equity research over price history and filings.</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--ink-3);">↗</span></a></li>
+      <li><a href="https://github.com/adikul25/candle_pattern_identification" target="_blank" rel="noopener" style="display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 18px; row-gap: 6px; padding: 17px 8px; border-bottom: 1px solid var(--line-soft); color: var(--ink); transition: background 0.2s;" class="hv26"><span style="flex: 1 1 220px; min-width: 0; font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 500;">Candlestick Patterns</span><span style="flex: 2 1 260px; min-width: 0; font-size: 14.5px; color: var(--ink-2);">Doji, Hammer, Morning Star and friends — detected with TA-Lib and hand-written formulas.</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--ink-3);">↗</span></a></li>
+      <li><a href="https://github.com/adikul25/langchain-googleGenAI-SQL" target="_blank" rel="noopener" style="display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 18px; row-gap: 6px; padding: 17px 8px; border-bottom: 1px solid var(--line-soft); color: var(--ink); transition: background 0.2s;" class="hv27"><span style="flex: 1 1 220px; min-width: 0; font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 500;">NLQ → SQL</span><span style="flex: 2 1 260px; min-width: 0; font-size: 14.5px; color: var(--ink-2);">Ask a SQLite database a question in English; LangChain and Gemini write the query.</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--ink-3);">↗</span></a></li>
+      <li><a href="https://github.com/adikul25/finance_gpt_reporting_and_sentiment" target="_blank" rel="noopener" style="display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 18px; row-gap: 6px; padding: 17px 8px; border-bottom: 1px solid var(--line-soft); color: var(--ink); transition: background 0.2s;" class="hv28"><span style="flex: 1 1 220px; min-width: 0; font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 500;">Finance GPT Reporting</span><span style="flex: 2 1 260px; min-width: 0; font-size: 14.5px; color: var(--ink-2);">Automated financial summaries with sentiment scoring on top.</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--ink-3);">↗</span></a></li>
+      <li><a href="https://github.com/adikul25/whatsapp_groupchats_viz" target="_blank" rel="noopener" style="display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 18px; row-gap: 6px; padding: 17px 8px; border-bottom: 1px solid var(--line-soft); color: var(--ink); transition: background 0.2s;" class="hv29"><span style="flex: 1 1 220px; min-width: 0; font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 500;">WhatsApp Chat Analysis</span><span style="flex: 2 1 260px; min-width: 0; font-size: 14.5px; color: var(--ink-2);">Exported group chats turned into activity, sentiment and who-talks-most charts.</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--ink-3);">↗</span></a></li>
+      <li><a href="https://github.com/adikul25/doc_classification" target="_blank" rel="noopener" style="display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 18px; row-gap: 6px; padding: 17px 8px; border-bottom: 1px solid var(--line-soft); color: var(--ink); transition: background 0.2s;" class="hv30"><span style="flex: 1 1 220px; min-width: 0; font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 500;">Document Classification</span><span style="flex: 2 1 260px; min-width: 0; font-size: 14.5px; color: var(--ink-2);">Routing unstructured documents into categories without hand-written rules.</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--ink-3);">↗</span></a></li>
+      <li><a href="https://github.com/adikul25/Notebooks" target="_blank" rel="noopener" style="display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 18px; row-gap: 6px; padding: 17px 8px; border-bottom: 1px solid var(--line-soft); color: var(--ink); transition: background 0.2s;" class="hv31"><span style="flex: 1 1 220px; min-width: 0; font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 500;">Notebooks</span><span style="flex: 2 1 260px; min-width: 0; font-size: 14.5px; color: var(--ink-2);">Working notes — experiments, teardowns and things that didn't make it into a repo of their own.</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--ink-3);">↗</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<section id="writing" style="padding: clamp(48px, 8vh, 88px) 0; border-top: 1px solid var(--line-soft);">
+  <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 44px;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3);">04 — Writing &amp; models</div>
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(28px, 4.5vw, 46px); line-height: 1; letter-spacing: -0.03em;">Where I publish</h2>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line);">
+    <a href="https://medium.com/@adikulkarni25" target="_blank" rel="noopener" style="background: var(--surface); padding: clamp(26px, 3.4vw, 38px); display: flex; flex-direction: column; gap: 14px; color: var(--ink); transition: background 0.25s;" class="hv32">
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--acc2);">Medium</span>
+      <span style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 2.8vw, 30px); font-weight: 700; letter-spacing: -0.025em; line-height: 1.1;">Write-ups on applied AI</span>
+      <span style="font-size: 15.5px; line-height: 1.6; color: var(--ink-2);">Walkthroughs of the systems on this page — RAG retrieval choices, agent orchestration, and the parts that turned out harder than the tutorials suggest.</span>
+      <span style="margin-top: 4px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--acc);">Read on Medium ↗</span>
+    </a>
+    <a href="https://huggingface.co/Adikul25" target="_blank" rel="noopener" style="background: var(--surface); padding: clamp(26px, 3.4vw, 38px); display: flex; flex-direction: column; gap: 14px; color: var(--ink); transition: background 0.25s;" class="hv33">
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--acc2);">Hugging Face</span>
+      <span style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 2.8vw, 30px); font-weight: 700; letter-spacing: -0.025em; line-height: 1.1;">Models &amp; datasets</span>
+      <span style="font-size: 15.5px; line-height: 1.6; color: var(--ink-2);">Fine-tunes, embeddings experiments and the datasets behind them — published so the results can be reproduced rather than described.</span>
+      <span style="margin-top: 4px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--acc);">View profile ↗</span>
+    </a>
+  </div>
+</section>
+
+<section id="stack" style="padding: clamp(48px, 8vh, 88px) 0; border-top: 1px solid var(--line-soft);">
+  <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 44px;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3);">05 — Stack</div>
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(28px, 4.5vw, 46px); line-height: 1; letter-spacing: -0.03em;">What I work in</h2>
+  </div>
+
+  <div style="display: grid; gap: 34px;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: clamp(16px, 3vw, 40px); padding-bottom: 30px; border-bottom: 1px solid var(--line);">
+      <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--acc);">Languages &amp; data</h3>
+      <div style="grid-column: span 2; min-width: 0; display: flex; flex-wrap: wrap; gap: 8px;">
+        <span style="padding: 8px 14px; background: var(--surface); border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--ink);">Python</span>
+        <span style="padding: 8px 14px; background: var(--surface); border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--ink);">SQL</span>
+        <span style="padding: 8px 14px; background: var(--surface); border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--ink);">PostgreSQL</span>
+        <span style="padding: 8px 14px; background: var(--surface); border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--ink);">MySQL</span>
+        <span style="padding: 8px 14px; background: var(--surface); border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--ink);">MongoDB</span>
+        <span style="padding: 8px 14px; background: var(--surface); border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--ink);">Neo4j</span>
+        <span style="padding: 8px 14px; background: var(--surface); border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--ink);">HTML / CSS</span>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: clamp(16px, 3vw, 40px); padding-bottom: 30px; border-bottom: 1px solid var(--line);">
+      <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--acc);">AI &amp; frameworks</h3>
+      <div style="grid-column: span 2; min-width: 0; display: flex; flex-wrap: wrap; gap: 8px;">
+        <span style="padding: 8px 14px; background: var(--surface); border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--ink);">LangChain</span>
+        <span style="padding: 8px 14px; background: var(--surface); border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--ink);">LangGraph</span>
+        <span style="padding: 8px 14px; background: var(--surface); border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--ink);">CrewAI</span>
+        <span style="padding: 8px 14px; background: var(--surface); border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--ink);">FastAPI</span>
+        <span style="padding: 8px 14px; background: var(--surface); border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--ink);">Streamlit</span>
+        <span style="padding: 8px 14px; background: var(--surface); border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--ink);">PyTorch</span>
+        <span style="padding: 8px 14px; background: var(--surface); border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--ink);">TensorFlow</span>
+        <span style="padding: 8px 14px; background: var(--surface); border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--ink);">scikit-learn</span>
+        <span style="padding: 8px 14px; background: var(--surface); border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--ink);">Django</span>
+        <span style="padding: 8px 14px; background: var(--surface); border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--ink);">Flask</span>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: clamp(16px, 3vw, 40px);">
+      <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--acc);">Cloud &amp; tooling</h3>
+      <div style="grid-column: span 2; min-width: 0; display: flex; flex-wrap: wrap; gap: 8px;">
+        <span style="padding: 8px 14px; background: var(--surface); border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--ink);">AWS</span>
+        <span style="padding: 8px 14px; background: var(--surface); border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--ink);">GCP</span>
+        <span style="padding: 8px 14px; background: var(--surface); border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--ink);">Docker</span>
+        <span style="padding: 8px 14px; background: var(--surface); border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--ink);">Databricks</span>
+        <span style="padding: 8px 14px; background: var(--surface); border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--ink);">Git</span>
+        <span style="padding: 8px 14px; background: var(--surface); border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--ink);">Jupyter</span>
+        <span style="padding: 8px 14px; background: var(--surface); border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--ink);">Power BI</span>
+        <span style="padding: 8px 14px; background: var(--surface); border: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--ink);">Tableau</span>
+      </div>
+    </div>
+  </div>
+
   
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BB8W2X"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  <!-- ======= Header ======= -->
-  <header id="header" class="header-tops">
+</section>
 
-    <div class="container">
+<section id="education" style="padding: clamp(48px, 8vh, 88px) 0; border-top: 1px solid var(--line-soft);">
+  <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 44px;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3);">06 — Education</div>
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(28px, 4.5vw, 46px); line-height: 1; letter-spacing: -0.03em;">Training</h2>
+  </div>
 
-      <h1><a href="index.html">Aditya Kulkarni</a></h1>
-      <h2 style="color:#fff">I'm <span class="typing" style="color:#12D640"></span></h2>
-      <nav class="nav-menu d-none d-lg-block">
-        <ul>
-          <li class="active"><a href="#header"> <span>Home</span></a></li>
-          <li><a href="#about"><span>About</span></a></li>
-          <li><a href="#education"> <span>Education</span></a></li>
-          <li><a href="#experience"> <span>Experience</span></a></li>
-<!--          <li><a href="#projects"> <span>Projects</span></a></li>-->
-          <li><a href="#portfolio"> <span>Projects</span></a></li>
-          <li><a href="#skills"> <span>Skills</span></a></li>
-          <li><a href="https://drive.google.com/file/d/1EB8Own4JNi8UBjKoXlw4p1dkHH_P8J4U/view?usp=drivesdk" target="_blank"> <span>Resume</span></a></li>
-          <!-- <li><a href="#links"> <span>Resume & Links</span></a></li> -->
-          <li><a href="#contacts"> <span>Contact</span></a></li>
-
-        </ul>
-      </nav><!-- .nav-menu -->
-
-      <div class="social-links">
-          <a href="https://www.linkedin.com/in/aditya-kulkarni-855675205/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-          <a href="https://www.github.com/adikul25" target="_blank" class="github"><i class="bx bxl-github"></i></a>
-          <a href="mailto:adikulk2598@gmail.com" target="_blank" class="google"><i class="bx bxl-google"></i></a>
-
-      </div>
-
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line);">
+    <div style="background: var(--surface); padding: clamp(24px, 3vw, 32px);">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.08em; color: var(--acc);">AUG 2023 — PRESENT</div>
+      <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(20px, 2.4vw, 25px); letter-spacing: -0.02em; margin-top: 12px; line-height: 1.2;">MS, Business Analytics</h3>
+      <p style="margin-top: 8px; font-size: 15.5px; color: var(--ink-2);">California State University, East Bay</p>
+      <p style="margin-top: 16px; font-size: 14.5px; line-height: 1.6; color: var(--ink-2);">Data engineering &amp; applications · Time-series analytics · Advanced topics in analytics</p>
     </div>
-  </header><!-- End Header -->
-
-  <!-- ======= About Section ======= -->
-  <section id="about" class="about">
-
-    <!-- ======= About Me ======= -->
-    <div class="about-me container">
-
-      <div class="section-title">
-        <h2>About</h2>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-4" data-aos="fade-right">
-          <img src="assets/img/photo.jpg" class="img-fluid" alt="" height="100" width="275">
-        </div>
-        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-          <p>Results-driven Machine Learning Engineer with 3+ years of experience designing AI-powered, data-driven solutions that improve decision-making, automate workflows, and drive measurable business outcomes.
-             Proficient in Python, SQL, cloud platforms (AWS, GCP), and visualization tools (Power BI, Tableau). Skilled in building Generative AI applications, RAG pipelines, NLP models, and scalable backend systems using FastAPI, Streamlit, and LangChain.
-             Adept at bridging technical expertise with business strategy, delivering actionable insights across HRTech, AgroTech, and EdTech domains. Currently pursuing a Master's in Business Analytics at CSU East Bay.
-          </p>
-          <div class="row">
-            <div class="col-lg-6">
-              <ul>
-                <li><i class="icofont-rounded-right"></i> <strong>Birthday:</strong> 25 September 1998</li>
-                <li><i class="icofont-rounded-right"></i> <strong>Phone:</strong> +1 510-294-8746</li>
-              </ul>
-            </div>
-            <div class="col-lg-6">
-              <ul>
-                <li><i class="icofont-rounded-right"></i> <strong>City:</strong> San Francisco, CA</li>
-                <li><i class="icofont-rounded-right"></i> <strong>Email:</strong> adikulk2598@gmail.com</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div><!-- End About Me -->
-
-    <!-- ======= Interests ======= -->
-    <div class="interests container">
-
-      <div class="section-title">
-        <h2>Interests</h2>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3 col-md-4">
-          <div class="icon-box">
-            <i class="ri-global-line" style="color: #ffbb2c;"></i>
-            <h3>Software Development</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-          <div class="icon-box">
-            <i class="ri-database-2-line" style="color: #5578ff;"></i>
-            <h3>Machine Learning</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-          <div class="icon-box">
-            <i class="ri-database-2-line" style="color: #e80368;"></i>
-            <h3>Data Engineering</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
-          <div class="icon-box">
-            <i class="ri-english-input" style="color: #1c7d32;"></i>
-            <h3>Natural Language Processing</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-database-2-fill" style="color: #28a745;"></i>
-            <h3>Graph Database</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-bar-chart-box-line" style="color: #f1081f;"></i>
-            <h3>Visualization</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-file-list-3-line" style="color: #47aeff;"></i>
-            <h3>Algorithms</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-image-line" style="color: #ffc107;"></i>
-            <h3>Image Processing</h3>
-          </div>
-        </div>
-      </div>
-
-    </div><!-- End Interests -->
-  </section><!-- End About Section -->
-
-
-
-  <!-- ======= Education Section ======= -->
-  <section id="education" class="services">
-    <div class="container">
-      <div class="section-title">
-        <h2>Education</h2>
-      </div>
-      <div class="row">
-        <div class="col-lg-12" data-aos="fade-up" style="display: inline-block;">
-
-
-            <div class="col-md-4 mt-2 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom: 5px;display: inline-block;">
-              <img src="assets/img/education/csueb_optimized.png" class="img-fluid" alt="" style="max-width: 65%; height: auto;">
-              <!-- <h4 style="text-align:left;"><a href="https://www.asu.edu/" target="_blank" style="color:#12d640">Arizona State University</a><br> </h4> -->
-              <p style="text-align:left;color:#fff;padding: 3px 8px;font-size: 15px;margin-bottom: 5px;"><em>MS in Business Analytics</em></p>
-              <h5 style="text-align:left;padding: 0px 8px;font-size: 13px;margin-bottom: 8px;">August 2023 - Present</h5>
-              <h6 style="text-align:left;color:#fff;padding: 0px 8px;font-size: 13px;margin-bottom: 5px;">Relevant Coursework</h6>
-              <ul style="text-align:left;color:#fff;font-size: 13px;margin-bottom: 0px;">
-                <li>Data Engineering & Applications</li>
-                <li>Advanced Topics in Analytics</li>
-                <li>Time Series Analytics</li>
-              </ul>
-            </div>
-            <div class="col-md-4 mt-2 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom: 5px;display: inline-block;">
-              <img src="assets/img/education/mpstme_optimized.png" class="img-fluid" alt="" style="max-width: 65%; height: auto;">
-              <!-- <h4 style="text-align:left;"><a href="https://ahduni.edu.in/" target="_blank" style="color:#12d640">Ahmedabad University</a><br> </h4> -->
-              <p style="text-align:left;color:#fff;padding: 3px 8px;font-size: 15px;margin-bottom: 5px;"><em>B.Tech. in Electronics & Telecommunication</em></p>
-              <h5 style="text-align:left;padding: 0px 8px;font-size: 13px;margin-bottom: 8px;">July 2016 - May 2021</h5>
-              <h6 style="text-align:left;color:#fff;padding: 0px 8px;font-size: 13px;margin-bottom: 5px;">Relevant Coursework</h6>
-              <ul style="text-align:left;color:#fff;font-size: 13px;margin-bottom: 0px;">
-
-                <li>Object Oriented Programming</li>
-
-                <li>Business Visualization</li>
-                <li>Probablity & Random Processes</li>
-                <!-- <li>Computer Vision</li> -->
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-    <div class="portfolio">
-    <div class="container">
-      <div class="section-title">
-        <h2>Certifications</h2>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-12" data-aos="fade-up" style="display: inline-block;">
-
-          <div class="col-md-3 mt-2 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom: 5px;display: inline-block;">
-            <img src="assets/img/certification/datacamp_optimized.png" class="img-fluid" alt="" style="max-width: 80%; height: auto;">
-            <p style="text-align:left;color:#fff;padding: 5px 10px;font-size: 15px;"><em><a href="https://www.datacamp.com/completed/statement-of-accomplishment/course/1938522143dd3a8157007a38daf928e566cae126" target="_blank" style="color:#12d640">Unsupervised Machine Learning</a></em></p>
-          </div>
-
-          <div class="col-md-3 mt-2 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom: 5px;display: inline-block;">
-            <img src="assets/img/certification/datacamp_optimized.png" class="img-fluid" alt="" style="max-width: 80%; height: auto;">
-            <p style="text-align:left;color:#fff;padding: 5px 10px;font-size: 15px;"><em><a href="https://www.datacamp.com/completed/statement-of-accomplishment/track/c48dd7f12ad4415e0fa2fa045c45d89a8e761499" target="_blank" style="color:#12d640">Associate Data Scientist</a></em></p>
-          </div>
-
-          <div class="col-md-3 mt-2 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom: 5px;display: inline-block;">
-            <img src="assets/img/certification/datacamp_optimized.png" class="img-fluid" alt="" style="max-width: 80%; height: auto;">
-            <p style="text-align:left;color:#fff;padding: 5px 10px;font-size: 15px;"><em><a href="https://www.datacamp.com/completed/statement-of-accomplishment/course/ea177af5135705ce488e84ec657c8848056621b6" target="_blank" style="color:#12d640">Algorithmic Toolbox</a></em></p>
-          </div>
-
-          <div class="col-md-3 mt-2 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom: 5px;display: inline-block;">
-            <img src="assets/img/certification/ibm.jpg" class="img-fluid" alt="" style="max-width: 80%; height: auto;">
-            <p style="text-align:left;color:#fff;padding: 5px 10px;font-size: 15px;"><em><a href="https://www.coursera.org/account/accomplishments/verify/HCTJQ5VXQ7AT" target="_blank" style="color:#12d640">Data Visualization and Dashboards with Excel and Cognos</a></em></p>
-          </div>
-
-        </div>
-      </div>
-
-        <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-project" style="position: absolute; left: 370px; top: 218.875px;">
-          <div class="portfolio-wrap">
-            <img src="assets/img/certification/ibm.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Machine Learning with Python</h4>
-              <div class="portfolio-links">
-                <a href="https://drive.google.com/file/d/1gimySw_NPzCJ54dqZ2j2wYyz-JDOg-S0/view?usp=sharing" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-project" style="position: absolute; left: 740px; top: 218.875px;">
-          <div class="portfolio-wrap">
-            <img src="assets/img/certification/dai.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Neural Networks and Deep Learning</h4>
-              <div class="portfolio-links">
-                <a href="https://www.coursera.org/account/accomplishments/certificate/ELXZ6FE2BU7X?utm_medium=certificate&amp;utm_source=link&amp;utm_campaign=copybutton_certificate/" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div> -->
-
-      </div>
+    <div style="background: var(--surface); padding: clamp(24px, 3vw, 32px);">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.08em; color: var(--acc);">JUL 2016 — MAY 2021</div>
+      <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(20px, 2.4vw, 25px); letter-spacing: -0.02em; margin-top: 12px; line-height: 1.2;">B.Tech, Electronics &amp; Telecommunication</h3>
+      <p style="margin-top: 8px; font-size: 15.5px; color: var(--ink-2);">MPSTME, NMIMS</p>
+      <p style="margin-top: 16px; font-size: 14.5px; line-height: 1.6; color: var(--ink-2);">Object-oriented programming · Probability &amp; random processes · Business visualization</p>
     </div>
-    </div>
+  </div>
 
-  </section>
-  <!-- End Education Section -->
+  <p style="margin-top: 26px; font-size: 14.5px; line-height: 1.8; color: var(--ink-2);">
+    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3);">Certifications&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+    <a href="https://www.datacamp.com/completed/statement-of-accomplishment/track/c48dd7f12ad4415e0fa2fa045c45d89a8e761499" target="_blank" rel="noopener">Associate Data Scientist</a> and
+    <a href="https://www.datacamp.com/completed/statement-of-accomplishment/course/1938522143dd3a8157007a38daf928e566cae126" target="_blank" rel="noopener">Unsupervised ML</a> (DataCamp),
+    <a href="https://www.datacamp.com/completed/statement-of-accomplishment/course/ea177af5135705ce488e84ec657c8848056621b6" target="_blank" rel="noopener">Algorithmic Toolbox</a>, and
+    <a href="https://www.coursera.org/account/accomplishments/verify/HCTJQ5VXQ7AT" target="_blank" rel="noopener">Data Visualization &amp; Dashboards</a> (IBM).
+  </p>
+</section>
 
+<section id="contact" style="padding: clamp(56px, 10vh, 108px) 0 clamp(40px, 6vh, 64px); border-top: 1px solid var(--line-soft);">
+  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3);">07 — Contact</div>
+  <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(34px, 7vw, 74px); line-height: 1; letter-spacing: -0.035em; margin-top: 24px; max-width: 20ch;">Let's compare notes.</h2>
+  <p style="max-width: 52ch; margin-top: 22px; font-size: clamp(16px, 2vw, 19px); line-height: 1.6; color: var(--ink-2);">I'm always up for a conversation about applied AI — what's working, what quietly isn't. Email is the fastest way to reach me.</p>
 
+  <a href="mailto:adikulk2598@gmail.com" style="display: inline-block; margin-top: 32px; font-family: 'Space Grotesk', sans-serif; font-size: clamp(20px, 3.6vw, 38px); font-weight: 500; letter-spacing: -0.02em; color: var(--acc); border-bottom: 2px solid var(--acc-edge); padding-bottom: 4px;" class="hv34">adikulk2598@gmail.com</a>
 
-  <!-- Start Experience Section -->
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px; margin-top: clamp(40px, 6vh, 64px); background: var(--line); border: 1px solid var(--line);">
+    <a href="https://www.linkedin.com/in/aditya-kulkarni-855675205/" target="_blank" rel="noopener" style="background: var(--surface); padding: 22px; display: block; color: var(--ink); transition: background 0.2s;" class="hv35">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3);">LinkedIn</div>
+      <div style="margin-top: 9px; font-size: 15px;">aditya-kulkarni ↗</div>
+    </a>
+    <a href="https://www.github.com/adikul25" target="_blank" rel="noopener" style="background: var(--surface); padding: 22px; display: block; color: var(--ink); transition: background 0.2s;" class="hv36">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3);">GitHub</div>
+      <div style="margin-top: 9px; font-size: 15px;">adikul25 ↗</div>
+    </a>
+    <a href="https://drive.google.com/file/d/1EB8Own4JNi8UBjKoXlw4p1dkHH_P8J4U/view?usp=drivesdk" target="_blank" rel="noopener" style="background: var(--surface); padding: 22px; display: block; color: var(--ink); transition: background 0.2s;" class="hv37">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3);">Résumé</div>
+      <div style="margin-top: 9px; font-size: 15px;">Download PDF ↗</div>
+    </a>
+    <a href="https://medium.com/@adikulkarni25" target="_blank" rel="noopener" style="background: var(--surface); padding: 22px; display: block; color: var(--ink); transition: background 0.2s;" class="hv38">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3);">Medium</div>
+      <div style="margin-top: 9px; font-size: 15px;">@adikulkarni25 ↗</div>
+    </a>
+    <a href="https://huggingface.co/Adikul25" target="_blank" rel="noopener" style="background: var(--surface); padding: 22px; display: block; color: var(--ink); transition: background 0.2s;" class="hv39">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3);">Hugging Face</div>
+      <div style="margin-top: 9px; font-size: 15px;">Adikul25 ↗</div>
+    </a>
+    
+      <a href="tel:+15102948746" style="background: var(--surface); padding: 22px; display: block; color: var(--ink); transition: background 0.2s;" class="hv40">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3);">Phone</div>
+        <div style="margin-top: 9px; font-size: 15px;">+1 510-294-8746</div>
+      </a>
+    
+  </div>
+</section>
 
-  <section id="experience" class="services">
-    <div class="container">
-      <div class="section-title">
-        <h2>Experience</h2>
-      </div>
-      <div class="row">
-          <div class="col-lg-12" data-aos="fade-up">
+<footer style="display: flex; justify-content: space-between; align-items: baseline; gap: 20px; flex-wrap: wrap; padding: 26px 0 40px; border-top: 1px solid var(--line-soft); font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.06em; color: var(--ink-3);">
+  <span>© 2026 Aditya Kulkarni</span>
+  <span>Built by hand — no template</span>
+</footer>
 
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="https://www.apexon.com/" style="color:#12d640">APEXON</a><br> </h4>
-                <h5 style="text-align:left;">September 2025 - Present</h5>
-                <p style="text-align:left;color:#fff"><em>AI/ML Engineer Intern</em></p>
-                <p style="text-align:left;">Developed an AI-powered immigration chatbot using LangGraph and FastAPI, reducing HR support requests by 60% through multi-agent orchestration and RAG retrieval.</p>
-              </div>
-
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="https://www.gohighlevel.com/" style="color:#12d640">GoHighLevel</a><br> </h4>
-                <h5 style="text-align:left;">May 2025 - September 2025</h5>
-                <p style="text-align:left;color:#fff"><em>AI Engineer Intern</em></p>
-                <p style="text-align:left;">Built AI automation solutions for HRIS migration and resume screening, processing 10,000+ employee records and reducing screening time by 50% using Gemini AI.</p>
-              </div>
-
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a style="color:#12d640">IRIKA</a><br> </h4>
-                <h5 style="text-align:left;">June 2024 - Present</h5>
-                <p style="text-align:left;color:#fff"><em>Co-Founder</em></p>
-                <p style="text-align:left;">Co-founded a smart irrigation startup building an AI-powered chatbot and IoT system to automate farming decisions based on real-time soil and weather data, accepted into Beta University's pre-accelerator program.</p>
-              </div>
-
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="https://www.konverge.ai/" style="color:#12d640">Konverge.ai</a><br> </h4>
-                <h5 style="text-align:left;">December 2021 - August 2023</h5>
-                <p style="text-align:left;color:#fff"><em>Data Scientist</em></p>
-                <p style="text-align:left;">Developed enterprise AI applications including a RAG-based HR QA platform and GPT-4 pitch evaluation system, improving data accessibility and decision-making efficiency by 35%.</p>
-              </div>
-
-            </div>
-          </div>
-        </div>
-    </div>
-  </section>
-
-  <!-- End Experience Section -->
-
-
-
-  <!-- Start Project Section -->
-  <section id="portfolio" class="portfolio">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Projects</h2>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-12 d-flex justify-content-center">
-          <ul id="portfolio-flters">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-blog">Blogs</li>
-            <li data-filter=".filter-project">Project</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="row portfolio-container">
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-blog">
-          <center><h4>ResearchAI - Multi-Agent System</h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/blog.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <div class="portfolio-links">
-                <a href="projects/research_crew_ai.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-project">
-          <center><h4>Image RAG Search</h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/ml.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <div class="portfolio-links">
-                <a href="projects/rag_image_search.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-project">
-          <center><h4>AI Stock Analysis</h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/ml.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <div class="portfolio-links">
-                <a href="projects/ai_stock_analysis.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-project">
-          <center><h4>WhatsAppChat Analysis</h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/vdg.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-
-              <div class="portfolio-links">
-                <a href="projects/whatsappchat.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-blog">
-          <center><h4>NLQ with Pandas</h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/NLPandas.jpeg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-
-              <div class="portfolio-links">
-                <a href="projects/NLPandas.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-blog">
-          <center><h4>NLQ with SQLite</h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/nlqSQLite.webp" class="img-fluid" alt="">
-            <div class="portfolio-info">
-
-              <div class="portfolio-links">
-                <a href="projects/NLQSQLite.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-project">
-          <center><h4>Notebooks</h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/Jupyter_logo.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-
-              <div class="portfolio-links">
-                <a href="projects/notebooks.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-project">
-          <!-- <br> -->
-          <center><h4>Stock Trainer Visualization</h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/lstm_stock.webp" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Resume Section Classifier</h4>
-              <div class="portfolio-links">
-                <a href="projects/lstm_stock.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-blog">
-          <center><h4>Extracting Data from PPTs</h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/langchain_ppt.webp" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <div class="portfolio-links">
-                <a href="projects/langchain_ppt.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- End Project Section -->
-
-
-
-  <!-- Start Skills Section -->
-
-  <section id="skills" class="services">
-    <div class="container">
-      <div class="section-title">
-        <h2>Skills</h2>
-      </div>
-      <div class="row">
-        <div class="col-lg-12" data-aos="fade-up">
-          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="background:#fff">
-            <h4 style="text-align:left;color:#09203a">Languages and Databases</h4>
-                <p style="text-align:left;">
-                  <img src="https://www.vectorlogo.zone/logos/python/python-horizontal.svg" alt="vectorlogo.zone" height="50" width="150">
-                  <img src="https://www.vectorlogo.zone/logos/neo4j/neo4j-ar21.svg" alt="vectorlogo.zone" height="50" width="120">
-                  <img src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="upload.wikimedia.org" height="60" width="90">
-                  <img src="https://www.vectorlogo.zone/logos/mysql/mysql-horizontal.svg" alt="vectorlogo.zone" height="70" width="130">
-                  <img src="https://www.vectorlogo.zone/logos/postgresql/postgresql-horizontal.svg" alt="vectorlogo.zone" height="50" width="190">
-                  <img src="https://www.vectorlogo.zone/logos/mongodb/mongodb-ar21.svg" alt="vectorlogo.zone" height="50" width="120">
-
-                </p>
-            </div>
-            <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="lefade-up" data-aos-delay="100" style="background:#fff">
-              <h4 style="text-align:left;color:#09203a">Frameworks & AI Tools</h4>
-                <p style="text-align:left;">
-                  <img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/djangoproject/djangoproject-ar21.svg" alt="vectorlogo.zone">
-                  <img src="assets/img/skills/fastapi-original-wordmark.svg" alt="FastAPI" height="80" width="120">
-                  <img src="assets/img/skills/langchain.svg" alt="LangChain" height="80" width="120">
-                  <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-ar21.svg" alt="vectorlogo.zone">
-                  <img src="assets/img/skills/streamlit.svg" alt="Streamlit" height="80" width="120">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="upload.wikimedia.org" width="90" height="70">
-              </p>
-          </div>
-          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="lefade-up" data-aos-delay="100" style="background:#fff">
-              <h4 style="text-align:left;color:#09203a">Tools & Cloud Platforms</h4>
-                <p style="text-align:left;">
-                  <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/docker/docker-official.svg" alt="vectorlogo.zone" height="80" width="100">
-                  <img src="https://www.vectorlogo.zone/logos/jupyter/jupyter-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/databricks/databricks-ar21.svg" alt="vectorlogo.zone">
-              </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- End Skills Section -->
-
-
-
-
-  <!-- Start Links section -->
-  <section id="links" class="services">
-    <div class="container">
-      <div class="section-title">
-        <h2>Resume & Links</h2>
-      </div>
-      <!-- <div class="row">
-        <div class="col-md-3 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-          <a href="https://drive.google.com/file/d/1EB8Own4JNi8UBjKoXlw4p1dkHH_P8J4U/view?usp=drivesdk" target="_blank"><div class="icon"><i class="icofont-page"></i></div></a> -->
-          <!-- <h4 class="title"><a href="https://drive.google.com/file/d/1EB8Own4JNi8UBjKoXlw4p1dkHH_P8J4U/view?usp=drivesdk" target="_blank">Resume</a></h4>
-          <p class="description" style="color:#fff;">The link contains downloadable resume</p> -->
-        </div>
-      </div>
-    </div>
-  </section> <!--End Links Section -->
-
-
-  <!-- Start Contact Section -->
-
-  <section id="contacts" class="contact">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Contact</h2>
-      </div>
-
-      <div class="row mt-2">
-
-        <!-- <div class="col-md-6 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-map"></i>
-            <h3>My Address</h3>
-            <p>1275 E University Dr</p>
-            <p>Unit 212</p>
-            <p>Tempe, AZ 85281</p>
-          </div>
-        </div> -->
-
-        <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-share-alt"></i>
-            <h3>Social Profiles</h3>
-            <div class="social-links">
-              <a href="https://www.linkedin.com/in/aditya-kulkarni-855675205/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-              <a href="https://www.github.com/adikul25" target="_blank" class="github"><i class="bx bxl-github"></i></a>
-              <a href="mailto:adikulk2598@gmail.com" target="_blank" class="google"><i class="bx bxl-google"></i></a>
-
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-envelope"></i>
-            <h3>Email</h3>
-            <p>adikulk2598@gmail.com</p>
-            <p>akulkarni19@horizon.csueastbay.edu</p>
-          </div>
-        </div>
-        <div class="col-md-6 mt-4 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-phone-call"></i>
-            <h3>Contact</h3>
-            <p>+1 510-294-8746</p>
-          </div>
-        </div>
-      </div>
-      <!-- <div id="sfczmlqxr5caww28rswrt8849ghbekgnh3j" ></div><script type="text/javascript" src="https://counter1.stat.ovh/private/counter.js?c=zmlqxr5caww28rswrt8849ghbekgnh3j&down=async" async></script><noscript><a href="https://www.freecounterstat.com" title="free web counter"><img src="https://counter1.stat.ovh/private/freecounterstat.php?c=zmlqxr5caww28rswrt8849ghbekgnh3j" border="0" title="free web counter" alt="free web counter" style="visibility: none;"></a></noscript> -->
-    </div>
-  </section>
-
-  <!-- End Contact Section -->
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="assets/vendor/counterup/counterup.min.js"></script>
-  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/venobox/venobox.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script type="text/javascript">
-    var typed = new Typed('.typing',{
-      strings: ["AI Enthusiast", "Data Scientist", "Developer"],
-      loop: true,
-      typeSpeed: 65,
-      backSpeed: 65
-    });
-  </script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+</div>
+</div>
 </body>
-
 </html>
