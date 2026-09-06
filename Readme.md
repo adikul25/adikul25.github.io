@@ -1,37 +1,16 @@
-# My Portfolio Website
+# adikul25.github.io
 
+Personal portfolio site for Aditya Kulkarni — AI/ML Engineer.
 
-## Features 📋
-- ⚡️ Fully Responsive
-- ⚡️ Valid HTML5 & CSS3
-- ⚡️ Typing animation using `Typed.js`
-- ⚡️ Easy to customize
+## Structure 📁
+- `index.html` — single-page site (profile, experience, projects, writing, stack, contact). All styles and theme-toggle script are inline, no build step.
+- `assets/portrait.jpg` — profile photo.
+- `favicon.png` — site favicon.
 
-## Installation & Deployment 📦
-- Clone the repository and modify the content in **index.html**.
-- Add or remove images from the `assets/img/` directory as needed.
-- Update the `projects` folder with your information.
-- Deploy your website using [GitHub Pages](https://create-react-app.dev/docs/deployment/#github-pages).
-- To deploy, create a repository named `<your-github-username>.github.io` and push the code to the `master` branch.
-
-## Sections 📚
-- ✔️ About
-- ✔️ Interests
-- ✔️ Education
-- ✔️ Online Certifications
-- ✔️ Experience
-- ✔️ Projects
-- ✔️ Skills
-- ✔️ Resume
-- ✔️ Contact Info
-
-## Tools Used 🛠️
-- **GitHub Pages** - To host the static website (HTML, CSS, JS).
+## Deployment 📦
+Pushes to `main` are published automatically by `.github/workflows/static.yml`, which uploads the repo root as static content to GitHub Pages. No build step is required — just edit `index.html` and push.
 
 ## License
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
-
-## Acknowledgements
-- This project was forked from [rajaprerak/rajaprerak.github.io](https://github.com/rajaprerak/rajaprerak.github.io).
